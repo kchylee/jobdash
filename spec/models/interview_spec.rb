@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Interview, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should belong_to(:application) }
+  it { should belong_to(:connection) }
+  it { should validate_presence_of(:date) }
+  it { should validate_presence_of(:stage) }
 end
